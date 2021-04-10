@@ -1,0 +1,108 @@
+/*
+background: #ECEDEF
+type: #000000
+boxes: #FFFFFF
+highlight (yellow): #F9DC4A
+links:
+  default: #2C81D0
+  visited: #778CCC
+  active: #0031C5
+*/
+body {
+  background-color: #ECEDEF;
+}
+@font-face {
+  font-family: DMSerifDisplayr;
+			 src: url('../font/DMSerifDisplay-Regular.ttf');
+}
+}
+@font-face {
+  font-family: Poppins;
+			 src: url('../font/Poppins-Light.ttf');
+}
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+h1 {
+  font-family: DMSerifDisplay;
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: Poppins;
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: Poppins;
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-family: Poppins;
+  font-size: 1.35em;
+  font-weight: 400;
+}
+p {
+  font-family: Poppins;
+}
+img {
+  width: 100%;
+}
+a {
+  font-family: Poppins;
+  color: #2C81D0;
+  text-decoration: none; /* No underlining */
+}
+a:hover {
+  color: #2C81D0;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+a:focus {
+  color: #2C81D0;
+  text-decoration: underline; /* Underlining when hovering over a link */
+}
+a:visited { /* visited link */
+  color: #778CCC;
+}
+a:active { /* selected link */
+  color: #0031C5;
+}
+.button {
+  display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+  background-color: #F9DC4A;
+  color: #000000; /* needed to override the default link color */
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 0px;
+  border-bottom: 0px solid #994c30; /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+.button:hover{
+  background-color: #FFFFFF
+  color: #000000;
+}
+.button:hover{
+  background-color: #FFFFFF
+  color: #000000;
+}
+.button.contact {
+  background-color: #2C81D0;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+}
+.button.contact:hover {
+  background-color: ##0031C5;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+}
+.button.contact:active {
+  background-color: ##0031C5;
+  color: #000000;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+}
