@@ -8,8 +8,21 @@ links:
   visited: #778CCC
   active: #0031C5
 */
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #ECEDEF;
+}
+header { /* had to move "background-color" below padding & margin for any of the settings to show up in a browser. ¯\_(ツ)_/¯*/
+  padding: 25px 30px 10px;
+  /*margin-bottom: 10px;*/
+  background-color: #F9DC4A;
+  box-shadow: 0px 4px 5px 0px rgba(249, 220, 74, 0.75);
+  border-bottom: 2px solid #FFFFFF;
+  position: fixed;
+  background-color: #ECEDEF;
+  width: 100%;
 }
 @font-face {
   font-family: DMSerifDisplayr;
@@ -25,20 +38,21 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-family: DMSerifDisplay;
-  font-size: 2.75em;
-  font-weight: 700;
+  font-size: 2em;
 }
 
 h2 {
   font-family: Poppins;
   font-size: 2.25em;
-  font-weight: 700;
+  font-weight: 400;
+  margin: 0;
 }
 
 h3 {
   font-family: Poppins;
   font-size: 1.75em;
-  font-weight: 400;
+  font-weight: 300;
+  margin: 0;
 }
 h4 {
   font-family: Poppins;
@@ -105,4 +119,63 @@ a:active { /* selected link */
   color: #000000;
   text-transform: uppercase;
   border: 2px solid #000000;
+}
+/* Layout Styling */
+/*header {
+  box-shadow: 0px 4px 5px 0px rgba(249, 220, 74, 0.75);
+  position: fixed;
+  background-color: #ECEDEF*/
+}
+
+.row {
+  margin: 25px 0px; /* 25px top and bottom, 0 left and right */
+}
+#hero {
+  text-align: center;
+}
+.logo {
+  max-width: 250px;
+}
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  padding: 0 12px;
+  text-transform: uppercase;
+  color: #000000;
+}
+nav > ul > li > a:visited {
+  padding: 0 20px;
+  text-transform: uppercase;
+  color: #000000
+}
+#hero {
+  background-color: #F9DC4A;
+  padding: 15px;
+  display: inline-block;
+}
+#hero h1 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+main {
+  padding-top: 123.03px;
+}
+.container {
+  padding: 15px;
+  margin: 0px;
+}
+.project{
+  padding: 10px;
+  margin: 20px;
+  background-color: white;
+  max-width: 500px;
+}
+.footainer {
+  padding: 10px;
+  margin: 20px;
 }
