@@ -71,18 +71,15 @@ a {
   text-decoration: none; /* No underlining */
 }
 a:hover {
-  color: #2C81D0;
+  color: #000000;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
 a:focus {
-  color: #2C81D0;
+  color: #000000;
   text-decoration: underline; /* Underlining when hovering over a link */
 }
-a:visited { /* visited link */
-  color: #778CCC;
-}
 a:active { /* selected link */
-  color: #0031C5;
+  color: #000000;
 }
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
@@ -92,15 +89,14 @@ a:active { /* selected link */
   padding: 10px;
   border-radius: 0px;
   border-bottom: 0px solid #994c30; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  text-decoration: none;
+  transition-duration: 0.2s;
+  transition-property: opacity;
 }
 .button:hover{
   background-color: #FFFFFF
   color: #000000;
-}
-.button:hover{
-  background-color: #FFFFFF
-  color: #000000;
+  opacity: 0.7;
 }
 .button.contact {
   background-color: #2C81D0;
@@ -129,6 +125,12 @@ a:active { /* selected link */
 
 .row {
   margin: 25px 0px; /* 25px top and bottom, 0 left and right */
+
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 #hero {
   text-align: center;
@@ -163,19 +165,103 @@ nav > ul > li > a:visited {
   padding: 0.5em 0;
 }
 main {
-  padding-top: 123.03px;
+  padding-top: 125px;
 }
 .container {
   padding: 15px;
   margin: 0px;
+  max-width: 1200px;
 }
 .project{
   padding: 10px;
   margin: 20px;
   background-color: white;
-  max-width: 500px;
+  max-width: 95%;
 }
 .footainer {
   padding: 10px;
   margin: 20px;
+  background-color: white;
+  max-width:75%;
+  text-align: center;
+}
+@media only screen and (min-width: 640px) {
+  header {
+    text-align: unset;
+    padding: 20px 15 13px
+  }
+  nav {
+    width:auto;
+    float: right;
+    margin-top: -6px
+  }
+  main {
+    padding-top: 81px;
+  }
+  p {
+  font-size: 18px
+  }
+  #hero span {
+    display:block;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    text-align: unset;
+    padding: 20px 15 13px
+  }
+  nav {
+    width:auto;
+    float: right;
+    margin-top: -6px
+  }
+  main {
+    padding-top: 81px;
+  }
+  p {
+  font-size: 18px
+  }
+  #hero span {
+    display:block;
+  }
+  .col-lg-7 {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+}
+[class*="col-"] {
+  float: left
+}
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #000000;}
+}
+.sun {
+  animation-duration: .5s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+.cloud-front {
+  animation-duration: 3s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+.cloud-back {
+  animation: 4s cloud-move-reverse infinite alternate linear;
 }
