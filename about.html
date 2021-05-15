@@ -1,28 +1,33 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" dir+"ltr">
   <head>
+    <i class="fas fa-bars"></i>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="utf-8">
     <meta name="author" content="Matt Gill">
     <meta name="description" content="UX digital UI industrial product service design user experience">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Matt Gill: About</title>
+    <title>Matt Gill Design</title>
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
   </head>
   <body>
-    <!-- HEADER -->
+  	<!-- HEADER -->
   	<header>
   		<!-- NAV -->
-      <div class="navtainer">
-  			<a href="index.html"><img class="logo" src="https://i.ibb.co/fG9h6zc/Head-logo-text.png" alt="Matt Gill" ></a>
-  			<nav>
-          <ul>
-    				<li><a href="index.html">Work</a></li>
-    				<li><a href="about.html">About</a></li>
-    				<li><a href="#contact">Contact</a></li>
-          </ul>
-  			</nav>
+  		<div class="navtainer">
+        <div class="navtoggle" id="myNavtoggle">
+    			<a href="index.html"><img class="logo" src="https://i.ibb.co/fG9h6zc/Head-logo-text.png" alt="Matt Gill" ></a>
+    			<nav>
+            <ul>
+      				<li><a href="index.html">Work</a></li>
+      				<li><a href="about.html">About</a></li>
+      				<li><a href="#contact">Contact</a></li>
+              <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i><svg enable-background="new 0 0 512 512" height="50px" id="Layer_1" version="1.1" viewBox="0 0 512 512" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="196" x2="316" y1="202.4" y2="202.4"/><line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="196" x2="316" y1="256" y2="256"/><line fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="10" x1="196" x2="316" y1="309.6" y2="309.6"/></g></svg></a></li>
+            </ul>
+    			</nav>
+        </div>
   		</div>
   	</header>
     <main>
@@ -91,6 +96,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

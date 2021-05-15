@@ -136,14 +136,47 @@ a:active { /* selected link */
   text-align: center;
 }
 .logo {
-  max-width: 250px;
+  max-width: 150px;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  text-align: right;
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,0,0,0);
+}
+
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+}
+.navtoggle.responsive li  {
+display: block;
+}
+nav {
+  display: inline-block;
+  width: 100%;
 }
 nav > ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 nav > ul > li {
-  display: inline-block;
+
 }
 nav > ul > li > a {
   padding: 0 12px;
@@ -165,18 +198,20 @@ nav > ul > li > a:visited {
   padding: 0.5em 0;
 }
 main {
-  padding-top: 125px;
+  padding-top: 56px;
 }
 .container {
   padding: 15px;
   margin: 0px;
   max-width: 1200px;
+  overflow: auto;
 }
 .project{
   padding: 10px;
   margin: 20px;
   background-color: white;
   max-width: 95%;
+  overflow: auto;
 }
 .footainer {
   padding: 10px;
@@ -184,16 +219,29 @@ main {
   background-color: white;
   max-width:75%;
   text-align: center;
+  overflow: auto;
 }
 @media only screen and (min-width: 640px) {
   header {
     text-align: unset;
-    padding: 20px 15 13px
+    padding: 20px 15 13px;
+  }
+  .navtoggle li:not(:last-child) {
+  display: inline-block;
+  }
+  .navtoggle li:last-child {
+  display: none;
   }
   nav {
     width:auto;
     float: right;
     margin-top: -6px
+  }
+  nav > ul {
+  margin: 1em 0;
+}
+  nav > ul > li {
+    display: inline-block;
   }
   main {
     padding-top: 81px;
@@ -207,6 +255,8 @@ main {
   .col-md-6 {
     width: 50%;
   }
+  .logo {
+    max-width: 250px;
 }
 @media only screen and (min-width: 1024px) {
   header {
